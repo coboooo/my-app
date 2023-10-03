@@ -12,6 +12,7 @@ const Component = () => {
       <Button title="Click me" onPress={() => setCount(count + 1)} />
 
       <Text>-------</Text>
+
       <Switch
         value={isOn}
         onValueChange={(v) => {
@@ -21,6 +22,7 @@ const Component = () => {
       />
 
       <Text>-------</Text>
+
       <TextInput
         value={name}
         onChangeText={(v) => {

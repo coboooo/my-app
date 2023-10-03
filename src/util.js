@@ -30,7 +30,6 @@ export const fillEmptyColumns = (columns, start, end) => {
 
   return filledColumns;
 };
-
 export const getCalendarColumns = (now) => {
   const start = dayjs(now).startOf("month"); // 11.1
   const end = dayjs(now).endOf("month"); // 11.30
@@ -41,10 +40,10 @@ export const getCalendarColumns = (now) => {
     const date = dayjs(start).add(i, "day");
     columns.push(date);
   }
-  // console.log('columns 11월', columns);
+  console.log("columns 11월", columns);
 
   const filledColumns = fillEmptyColumns(columns, start, end);
-  // console.log('columns 최종', columns);
+  console.log("columns 최종", columns);
   // ["10.31", "11.1", ..., "11.30", "12.1", "12.2", "12.3"]
   return filledColumns;
 };
